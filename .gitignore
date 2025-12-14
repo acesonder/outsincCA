@@ -1,0 +1,62 @@
+# OUTSINC .gitignore
+
+# Environment and configuration
+.env
+config/local.php
+
+# Uploads and user-generated content
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Database backups
+*.sql.gz
+*.sql.zip
+database/backups/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+composer.lock
+
+# Node modules (if used)
+node_modules/
+package-lock.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# Cache
+cache/
+*.cache
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Build artifacts
+dist/
+build/
+
+# Test coverage
+coverage/
+.phpunit.result.cache
