@@ -66,8 +66,9 @@ if [ $OPEN_PAREN -ne $CLOSE_PAREN ]; then
     ERRORS=$((ERRORS + 1))
 fi
 
-# Check for CREATE TABLE without closing semicolon
-if grep -P "CREATE TABLE.*\);(?!\s*$)" database/schema.sql > /dev/null; then
+# Check for CREATE TABLE without closing semicolon (using basic grep)
+# Note: This is a basic check and may not catch all edge cases
+if grep "CREATE TABLE" database/schema.sql | grep -v ";" > /dev/null; then
     echo -e "${YELLOW}⚠ Potential formatting issues detected${NC}"
 fi
 

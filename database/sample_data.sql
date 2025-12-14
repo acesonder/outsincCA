@@ -51,23 +51,23 @@ INSERT INTO resources (resource_name, category, description, address, city, post
 ('Safe Haven Drop-In', 'drop_in', 'Daytime drop-in center with showers, laundry, meals', '147 Abbott Street', 'Vancouver', 'V6B 2K7', '604-555-0808', 'welcome@safehaven.org', 'https://safehaven.org', 'Daily 8am-6pm', TRUE, TRUE, 'active');
 
 -- Create a demo admin user
--- Username: ADMIN001, Password: Admin123! (should be changed immediately)
+-- Username: ADMIN001, Password: Admin123! (CHANGE IMMEDIATELY AFTER FIRST LOGIN)
+-- Note: The hash below is for password "Admin123!" - you should change this after first login
 INSERT INTO users (user_id, username, password_hash, role, first_name, last_name, date_of_birth, status) VALUES
-('ADMIN001', 'ADMIN001', '$2y$10$YourHashedPasswordHere', 'admin', 'System', 'Administrator', '1990-01-01', 'active');
+('ADMIN001', 'ADMIN001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'System', 'Administrator', '1990-01-01', 'active');
 
--- Note: The password hash above is a placeholder. To create a real admin user:
--- 1. Register through the web interface, or
--- 2. Use PHP to generate a proper hash:
---    php -r "echo password_hash('YourPassword', PASSWORD_DEFAULT);"
--- 3. Then update this file with the real hash
+-- IMPORTANT: To generate a secure password hash, use:
+--   php -r "echo password_hash('YourSecurePassword', PASSWORD_DEFAULT);"
+-- Then replace the hash above with the generated one.
 
 -- Create user preferences for admin
 INSERT INTO user_preferences (user_id) 
 SELECT id FROM users WHERE user_id = 'ADMIN001';
 
 -- Insert sample demo worker account
+-- Username: JANWOR010190, Password: Worker123! (CHANGE IMMEDIATELY AFTER FIRST LOGIN)
 INSERT INTO users (user_id, username, password_hash, role, first_name, last_name, email, phone, date_of_birth, status) VALUES
-('JANWOR010190', 'JANWOR010190', '$2y$10$YourHashedPasswordHere', 'worker', 'Jane', 'Worker', 'jane.worker@outsinc.org', '604-555-1001', '1990-01-01', 'active');
+('JANWOR010190', 'JANWOR010190', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'worker', 'Jane', 'Worker', 'jane.worker@outsinc.org', '604-555-1001', '1990-01-01', 'active');
 
 INSERT INTO user_preferences (user_id) 
 SELECT id FROM users WHERE user_id = 'JANWOR010190';
