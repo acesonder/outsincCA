@@ -21,7 +21,8 @@ class Auth {
         $first = strtoupper(substr($firstName, 0, 3));
         $last = strtoupper(substr($lastName, 0, 3));
         $date = date('mdY', strtotime($dob));
-        $userId = $first . $last . substr($date, 0, 4) . substr($date, 6, 2);
+        // Extract MMDD (first 4 chars) and YY (last 2 chars)
+        $userId = $first . $last . substr($date, 0, 4) . substr($date, -2);
         
         // Check if exists, add counter if needed
         $counter = 1;

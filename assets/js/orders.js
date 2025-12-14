@@ -86,7 +86,10 @@ function initializeSearchFilter() {
     const searchInput = document.getElementById('product_search');
     const categoryFilter = document.getElementById('category_filter');
     
-    searchInput.addEventListener('input', OUTSINC.debounce(filterProducts, 300));
+    // Create debounced version of filterProducts
+    const debouncedFilter = OUTSINC.debounce(filterProducts, 300);
+    
+    searchInput.addEventListener('input', debouncedFilter);
     categoryFilter.addEventListener('change', filterProducts);
 }
 

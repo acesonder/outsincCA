@@ -53,9 +53,16 @@ try {
     $scheduledTime = null;
     if ($pickupDropoff === 'pickup' && isset($input['pickup_time'])) {
         // Convert pickup time to datetime (today + time)
-        $scheduledTime = date('Y-m-d') . ' ' . date('H:i:s', strtotime($input['pickup_time']));
+        $timeValue = strtotime($input['pickup_time']);
+        if ($timeValue !== false) {
+            $scheduledTime = date('Y-m-d') . ' ' . date('H:i:s', $timeValue);
+        }
     } elseif ($pickupDropoff === 'dropoff' && isset($input['dropoff_time'])) {
-        $scheduledTime = $input['dropoff_time'];
+        // Validate datetime format
+        $timeValue = strtotime($input['dropoff_time']);
+        if ($timeValue !== false) {
+            $scheduledTime = date('Y-m-d H:i:s', $timeValue);
+        }
     }
     
     // Insert order
