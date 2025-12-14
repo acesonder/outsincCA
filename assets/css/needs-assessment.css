@@ -1,0 +1,472 @@
+/* Needs Assessment & Smart Surveys Styling */
+
+.assessment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.assessment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.assessment-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.assessment-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.assessment-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.assessment-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: var(--text-primary);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.assessment-info-banner {
+    background: var(--info-color-light);
+    border-left: 4px solid var(--info-color);
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.assessment-info-banner .icon {
+    font-size: 1.5rem;
+}
+
+/* Domain Cards */
+.domain-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.domain-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.domain-card.expanded {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.domain-header {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color-light), transparent);
+    border-radius: 12px 12px 0 0;
+    transition: background 0.3s ease;
+}
+
+.domain-header:hover {
+    background: linear-gradient(135deg, var(--primary-color-light), var(--bg-secondary));
+}
+
+.domain-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    margin: 0;
+    flex: 1;
+}
+
+.domain-icon {
+    font-size: 2rem;
+}
+
+.domain-status {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.domain-status.status-in-progress {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+}
+
+.domain-status.status-complete {
+    background: var(--success-color-light);
+    color: var(--success-color);
+}
+
+.domain-score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.score-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.score-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.score-value.risk-low {
+    color: var(--success-color);
+}
+
+.score-value.risk-medium {
+    color: var(--warning-color);
+}
+
+.score-value.risk-high {
+    color: var(--error-color);
+}
+
+.domain-content {
+    display: none;
+    padding: 20px;
+}
+
+.domain-description {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Questions */
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-item {
+    padding: 15px;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.question-item:hover {
+    border-color: var(--primary-color);
+}
+
+.question-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.question-number {
+    background: var(--primary-color);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.why-btn {
+    background: var(--info-color);
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background 0.3s ease;
+}
+
+.why-btn:hover {
+    background: var(--info-color-dark);
+}
+
+/* Form Inputs */
+.question-item select,
+.question-item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.question-item select:focus,
+.question-item textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.radio-label:hover {
+    background: var(--bg-secondary);
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.radio-label.special-option {
+    color: var(--text-secondary);
+    font-style: italic;
+    border-top: 1px solid var(--border-color);
+    margin-top: 5px;
+    padding-top: 15px;
+}
+
+/* Scale Input */
+.scale-container {
+    padding: 10px 0;
+}
+
+.scale-container input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--success-color), var(--warning-color), var(--error-color));
+    outline: none;
+    cursor: pointer;
+}
+
+.scale-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scale-container input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.scale-labels span:nth-child(2) {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.skip-btn {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skip-btn:hover {
+    background: var(--border-color);
+}
+
+/* Assessment Actions */
+.assessment-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+/* History */
+.history-item {
+    padding: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.history-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.history-scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.history-score {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.history-score.risk-low {
+    background: var(--success-color-light);
+    color: var(--success-color);
+}
+
+.history-score.risk-medium {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+}
+
+.history-score.risk-high {
+    background: var(--error-color-light);
+    color: var(--error-color);
+}
+
+/* Chart Container */
+canvas {
+    margin-top: 20px;
+    max-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .assessment-container {
+        padding: 10px;
+    }
+    
+    .assessment-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .domain-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .domain-score {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .assessment-actions {
+        flex-direction: column;
+    }
+    
+    .assessment-controls {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .domain-card {
+        background: var(--card-bg-dark, #2a2a2a);
+    }
+    
+    .question-item {
+        background: var(--bg-primary-dark, #1a1a1a);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .assessment-controls,
+    .assessment-actions,
+    .why-btn,
+    .skip-btn {
+        display: none;
+    }
+    
+    .domain-content {
+        display: block !important;
+    }
+    
+    .domain-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
