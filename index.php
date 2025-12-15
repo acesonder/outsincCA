@@ -498,7 +498,7 @@ $pageTitle = 'Welcome to OUTSINC';
     <header class="navbar navbar-3d">
         <div class="container navbar-container">
             <a class="navbar-brand" href="#top">
-                <img src="/assets/img/logo.svg" alt="OUTSINC logo" class="navbar-logo" onerror="this.style.display='none'">
+                <img src="/assets/img/logo.svg" alt="OUTSINC logo" class="navbar-logo">
                 <span>OUTSINC</span>
             </a>
             <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
@@ -1179,9 +1179,7 @@ $pageTitle = 'Welcome to OUTSINC';
                         status.classList.remove('error');
                         status.classList.add('success');
                         protectedPanel?.removeAttribute('hidden');
-                        if (window.AnimationUtils && typeof AnimationUtils.fadeIn === 'function') {
-                            AnimationUtils.fadeIn(protectedPanel);
-                        }
+                        AnimationUtils.fadeIn(protectedPanel);
                     } else {
                         status.textContent = data.message || 'Access denied: incorrect deployment passcode.';
                         status.classList.remove('success');

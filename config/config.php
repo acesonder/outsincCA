@@ -35,7 +35,7 @@ if ($envPasscode !== false) {
 } elseif ($appEnv === 'local') {
     define('DEPLOYMENT_PASSCODE', '079777');
 } else {
-    define('DEPLOYMENT_PASSCODE', null);
+    throw new RuntimeException('DEPLOYMENT_PASSCODE must be set in non-local environments.');
 }
 
 // User roles
