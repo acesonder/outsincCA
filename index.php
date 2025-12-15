@@ -534,7 +534,7 @@ $pageTitle = 'Welcome to OUTSINC';
             <div class="hero-buttons">
                 <button class="hero-button" onclick="OUTSINC.showModal('login-modal')">Sign In</button>
                 <button class="hero-button secondary" onclick="OUTSINC.showModal('register-modal')">Get Support / Create Account</button>
-                <button class="hero-button" onclick="document.getElementById('install')?.scrollIntoView({behavior:'smooth'});">View Install Wizard</button>
+                <button class="hero-button" id="view-install">View Install Wizard</button>
             </div>
         </div>
     </section>
@@ -1180,7 +1180,7 @@ $pageTitle = 'Welcome to OUTSINC';
                         status.classList.add('success');
                         protectedPanel?.removeAttribute('hidden');
                         if (window.AnimationUtils && typeof AnimationUtils.fadeIn === 'function') {
-                            AnimationUtils.fadeIn(protectedPanel, 250);
+                            AnimationUtils.fadeIn(protectedPanel);
                         }
                     } else {
                         status.textContent = data.message || 'Access denied: incorrect deployment passcode.';
@@ -1193,6 +1193,13 @@ $pageTitle = 'Welcome to OUTSINC';
                     status.classList.remove('success');
                     status.classList.add('error');
                 });
+            });
+
+            document.getElementById('view-install')?.addEventListener('click', () => {
+                const section = document.getElementById('install');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
