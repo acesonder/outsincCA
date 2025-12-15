@@ -26,8 +26,8 @@ $pageTitle = 'Needs Assessment & Smart Surveys';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - OUTSINC</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/needs-assessment.css">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/styles.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/needs-assessment.css'); ?>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>

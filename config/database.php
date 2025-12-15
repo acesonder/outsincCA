@@ -5,10 +5,13 @@
  */
 
 class Database {
+    // ⚠️ LOCALHOST DEVELOPMENT CREDENTIALS ONLY!
+    // DO NOT use these credentials in production!
+    // Change to a dedicated database user with a strong password before deploying.
     private $host = 'localhost';
     private $db_name = 'outsinc_db';
-    private $username = 'outsinc_user';
-    private $password = 'change_me_in_production';
+    private $username = 'root';
+    private $password = '';  // Blank for localhost - CHANGE IN PRODUCTION!
     public $conn;
 
     public function getConnection() {

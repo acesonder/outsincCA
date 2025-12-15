@@ -13,7 +13,13 @@ if (session_status() === PHP_SESSION_NONE) {
 define('APP_NAME', 'OUTSINC');
 define('APP_TAGLINE', 'Outreach Someone In Need of Change');
 define('APP_VERSION', '1.0.0');
-define('BASE_URL', 'http://localhost');
+
+// Base URL - Auto-detect if running in subdirectory
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+$baseUrl = $protocol . $host . (($scriptDir !== '/' && $scriptDir !== '\\') ? $scriptDir : '');
+define('BASE_URL', $baseUrl);
 
 // Timezone
 date_default_timezone_set('America/Toronto');
@@ -73,4 +79,14 @@ spl_autoload_register(function ($class_name) {
         }
     }
 });
+
+/**
+ * Get the base URL for assets
+ * @param string $path Path relative to root (e.g., 'assets/css/styles.css')
+ * @return string Full URL to the asset
+ */
+function asset_url($path = '') {
+    $path = ltrim($path, '/');
+    return BASE_URL . ($path ? '/' . $path : '');
+}
 ?>

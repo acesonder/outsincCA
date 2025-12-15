@@ -13,19 +13,19 @@ $pageTitle = 'About OUTSINC';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - OUTSINC</title>
     <meta name="description" content="Learn about OUTSINC - a trauma-informed platform for supporting people facing homelessness, substance use, and mental health challenges.">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/styles.css'); ?>">
 </head>
 <body>
     <!-- Simple Top Bar for Public Pages -->
     <nav class="navbar navbar-3d">
         <div class="container">
             <div class="navbar-container">
-                <a href="/index.php" class="navbar-brand">
+                <a href="<?php echo asset_url('index.php'); ?>" class="navbar-brand">
                     <span>OUTSINC</span>
                 </a>
                 <ul class="navbar-menu">
-                    <li class="navbar-item"><a href="/index.php" class="navbar-link">Home</a></li>
-                    <li class="navbar-item"><a href="/about.php" class="navbar-link active">About</a></li>
+                    <li class="navbar-item"><a href="<?php echo asset_url('index.php'); ?>" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="<?php echo asset_url('about.php'); ?>" class="navbar-link active">About</a></li>
                     <li class="navbar-item"><a href="#services" class="navbar-link">Services</a></li>
                     <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
                 </ul>
@@ -162,7 +162,7 @@ $pageTitle = 'About OUTSINC';
                     we'd love to hear from you.
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/index.php" class="btn" style="background: white; color: var(--primary-color); text-decoration: none;">
+                    <a href="<?php echo asset_url('index.php'); ?>" class="btn" style="background: white; color: var(--primary-color); text-decoration: none;">
                         Get Support
                     </a>
                     <a href="#contact" class="btn btn-outline" style="border-color: white; color: white; text-decoration: none;">
@@ -184,8 +184,8 @@ $pageTitle = 'About OUTSINC';
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <p><a href="/index.php">Home</a></p>
-                    <p><a href="/about.php">About Us</a></p>
+                    <p><a href="<?php echo asset_url('index.php'); ?>">Home</a></p>
+                    <p><a href="<?php echo asset_url('about.php'); ?>">About Us</a></p>
                     <p><a href="#services">Services</a></p>
                     <p><a href="#resources">Resources</a></p>
                 </div>
@@ -205,6 +205,6 @@ $pageTitle = 'About OUTSINC';
     <!-- Back to Top -->
     <div class="back-to-top">↑</div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="<?php echo asset_url('assets/js/main.js'); ?>"></script>
 </body>
 </html>
