@@ -45,8 +45,8 @@ while ($row = $stmt->fetch_assoc()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - OUTSINC</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link rel="stylesheet" href="../../assets/css/consents.css">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/styles.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/consents.css'); ?>">
 </head>
 <body>
     <?php include '../includes/nav.php'; ?>

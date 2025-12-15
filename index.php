@@ -8,7 +8,7 @@ require_once __DIR__ . '/config/config.php';
 
 // If already logged in, redirect to dashboard
 if (isset($_SESSION['user_id'])) {
-    header('Location: /public/dashboard.php');
+    header('Location: ' . asset_url('public/dashboard.php'));
     exit();
 }
 
@@ -21,7 +21,7 @@ $pageTitle = 'Welcome to OUTSINC';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - OUTSINC</title>
     <meta name="description" content="OUTSINC - Outreach Someone In Need of Change. Person-centered support for homelessness, substance use, mental health, and crisis situations.">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/styles.css'); ?>">
     <style>
         .hero-section {
             min-height: 100vh;
@@ -501,7 +501,7 @@ $pageTitle = 'Welcome to OUTSINC';
     <header class="navbar navbar-3d">
         <div class="container navbar-container">
             <a class="navbar-brand" href="#top">
-                <img src="/assets/img/logo.svg" alt="OUTSINC logo" class="navbar-logo">
+                <img src="<?php echo asset_url('assets/img/logo.svg'); ?>" alt="OUTSINC logo" class="navbar-logo">
                 <span>OUTSINC</span>
             </a>
             <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
@@ -1157,8 +1157,8 @@ $pageTitle = 'Welcome to OUTSINC';
     <!-- Back to Top Button -->
     <div class="back-to-top">↑</div>
 
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/auth.js"></script>
+    <script src="<?php echo asset_url('assets/js/main.js'); ?>"></script>
+    <script src="<?php echo asset_url('assets/js/auth.js'); ?>"></script>
     <script>
         // Install wizard unlock
         document.addEventListener('DOMContentLoaded', () => {

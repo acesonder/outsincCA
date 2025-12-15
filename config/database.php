@@ -7,8 +7,8 @@
 class Database {
     private $host = 'localhost';
     private $db_name = 'outsinc_db';
-    private $username = 'outsinc_user';
-    private $password = 'change_me_in_production';
+    private $username = 'root';
+    private $password = '';
     public $conn;
 
     public function getConnection() {

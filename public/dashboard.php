@@ -22,7 +22,7 @@ $userRole = $_SESSION['role'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - OUTSINC</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo asset_url('assets/css/styles.css'); ?>">
     <style>
         body {
             padding-top: 70px;
