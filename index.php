@@ -829,14 +829,14 @@ $pageTitle = 'Welcome to OUTSINC';
             <div class="section-heading">
                 <p class="eyebrow">Deployment & install wizard</p>
                 <h2>Protected control center for setup, recovery, and customization</h2>
-                <p class="section-subtitle">Enter the deployment password (079777) to unlock database, UI, analytics, networking, and troubleshooting tools.</p>
+                <p class="section-subtitle">Enter the deployment passcode to unlock database, UI, analytics, networking, and troubleshooting tools.</p>
             </div>
 
             <div class="unlock-card">
                 <form id="install-wizard-form">
                     <label for="wizard-passcode" class="form-label required">Deployment passcode</label>
                     <div class="unlock-row">
-                        <input type="password" id="wizard-passcode" name="wizard-passcode" placeholder="Enter 079777 to access install tools" required aria-describedby="install-wizard-status">
+                        <input type="password" id="wizard-passcode" name="wizard-passcode" placeholder="Enter deployment passcode" required aria-describedby="install-wizard-status">
                         <button type="submit" class="btn btn-primary btn-3d">Unlock tools</button>
                     </div>
                     <div id="install-wizard-status" class="alert">Protected: passcode required to access install and deployment workflows.</div>
@@ -1167,17 +1167,30 @@ $pageTitle = 'Welcome to OUTSINC';
                 event.preventDefault();
                 const passcode = document.getElementById('wizard-passcode')?.value.trim();
 
-                if (passcode === '079777') {
-                    status.textContent = 'Deployment toolkit unlocked. All install, troubleshooting, and analytics tools are ready.';
-                    status.classList.remove('error');
-                    status.classList.add('success');
-                    protectedPanel?.removeAttribute('hidden');
-                    AnimationUtils?.fadeIn(protectedPanel, 250);
-                } else {
-                    status.textContent = 'Access denied: incorrect deployment passcode.';
+                fetch('/api/auth/unlock-install.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ passcode })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        status.textContent = 'Deployment toolkit unlocked. All install, troubleshooting, and analytics tools are ready.';
+                        status.classList.remove('error');
+                        status.classList.add('success');
+                        protectedPanel?.removeAttribute('hidden');
+                        AnimationUtils.fadeIn(protectedPanel, 250);
+                    } else {
+                        status.textContent = data.message || 'Access denied: incorrect deployment passcode.';
+                        status.classList.remove('success');
+                        status.classList.add('error');
+                    }
+                })
+                .catch(() => {
+                    status.textContent = 'Unable to unlock right now. Please try again.';
                     status.classList.remove('success');
                     status.classList.add('error');
-                }
+                });
             });
         });
     </script>

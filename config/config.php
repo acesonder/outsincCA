@@ -27,6 +27,7 @@ define('SESSION_LIFETIME', 3600); // 1 hour
 define('PASSWORD_MIN_LENGTH', 8);
 define('MAX_LOGIN_ATTEMPTS', 5);
 define('LOCKOUT_TIME', 900); // 15 minutes
+define('DEPLOYMENT_PASSCODE', '079777');
 
 // User roles
 define('ROLE_CLIENT', 'client');
