@@ -855,10 +855,20 @@ INSERT INTO resources (resource_name, category, description, address, city, post
 -- ============================================================================
 -- SAMPLE DATA - Demo Users
 -- ============================================================================
+-- ⚠️ SECURITY WARNING ⚠️
+-- These are DEMO accounts for LOCALHOST TESTING ONLY!
+-- Both accounts use the same password hash for simplicity in testing.
+-- 
+-- **REQUIRED ACTIONS AFTER FIRST LOGIN:**
+-- 1. Change the admin password immediately
+-- 2. Change the worker password immediately  
+-- 3. Delete these accounts and create real user accounts for production
+-- 4. NEVER deploy to production with these default credentials!
+-- ============================================================================
 
 -- Create a demo admin user
--- Username: ADMIN001, Password: Admin123! (CHANGE IMMEDIATELY AFTER FIRST LOGIN)
--- Note: The hash below is for password "Admin123!" - you should change this after first login
+-- Username: ADMIN001, Password: Admin123!
+-- ⚠️ This password is publicly known - CHANGE IMMEDIATELY!
 INSERT INTO users (user_id, username, password_hash, role, first_name, last_name, date_of_birth, status) VALUES
 ('ADMIN001', 'ADMIN001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'System', 'Administrator', '1990-01-01', 'active');
 
@@ -867,7 +877,8 @@ INSERT INTO user_preferences (user_id)
 SELECT id FROM users WHERE user_id = 'ADMIN001';
 
 -- Insert sample demo worker account
--- Username: JANWOR010190, Password: Worker123! (CHANGE IMMEDIATELY AFTER FIRST LOGIN)
+-- Username: JANWOR010190, Password: Worker123!
+-- ⚠️ This password is publicly known - CHANGE IMMEDIATELY!
 INSERT INTO users (user_id, username, password_hash, role, first_name, last_name, email, phone, date_of_birth, status) VALUES
 ('JANWOR010190', 'JANWOR010190', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'worker', 'Jane', 'Worker', 'jane.worker@outsinc.org', '604-555-1001', '1990-01-01', 'active');
 
