@@ -836,7 +836,7 @@ $pageTitle = 'Welcome to OUTSINC';
                 <form id="install-wizard-form">
                     <label for="wizard-passcode" class="form-label required">Deployment passcode</label>
                     <div class="unlock-row">
-                        <input type="password" id="wizard-passcode" name="wizard-passcode" placeholder="Enter deployment passcode" required aria-describedby="install-wizard-status">
+                        <input type="password" id="wizard-passcode" name="wizard-passcode" placeholder="Enter deployment passcode" autocomplete="off" required aria-describedby="install-wizard-status">
                         <button type="submit" class="btn btn-primary btn-3d">Unlock tools</button>
                     </div>
                     <div id="install-wizard-status" class="alert">Protected: passcode required to access install and deployment workflows.</div>
@@ -1179,7 +1179,9 @@ $pageTitle = 'Welcome to OUTSINC';
                         status.classList.remove('error');
                         status.classList.add('success');
                         protectedPanel?.removeAttribute('hidden');
-                        AnimationUtils.fadeIn(protectedPanel);
+                        if (window.AnimationUtils && typeof AnimationUtils.fadeIn === 'function') {
+                            AnimationUtils.fadeIn(protectedPanel);
+                        }
                     } else {
                         status.textContent = data.message || 'Access denied: incorrect deployment passcode.';
                         status.classList.remove('success');

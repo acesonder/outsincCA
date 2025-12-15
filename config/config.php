@@ -29,10 +29,12 @@ define('MAX_LOGIN_ATTEMPTS', 5);
 define('LOCKOUT_TIME', 900); // 15 minutes
 $envPasscode = getenv('DEPLOYMENT_PASSCODE');
 $appEnv = getenv('APP_ENV') ?: 'local';
+$allowDefaultSetting = getenv('ALLOW_DEFAULT_DEPLOYMENT_PASSCODE');
+$allowDefaultPasscode = $allowDefaultSetting === false ? ($appEnv === 'local') : ($allowDefaultSetting === 'true');
 
 if ($envPasscode !== false) {
     define('DEPLOYMENT_PASSCODE', $envPasscode);
-} elseif ($appEnv === 'local') {
+} elseif ($appEnv === 'local' && $allowDefaultPasscode) {
     define('DEPLOYMENT_PASSCODE', '079777');
 } else {
     throw new RuntimeException('DEPLOYMENT_PASSCODE must be set in non-local environments.');

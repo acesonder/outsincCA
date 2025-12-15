@@ -24,7 +24,7 @@ if (!$passcode) {
     exit();
 }
 
-if (is_null(DEPLOYMENT_PASSCODE) || DEPLOYMENT_PASSCODE === '') {
+if (!defined('DEPLOYMENT_PASSCODE') || DEPLOYMENT_PASSCODE === '') {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Deployment passcode is not configured.']);
     exit();
