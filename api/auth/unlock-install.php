@@ -24,7 +24,13 @@ if (!$passcode) {
     exit();
 }
 
-if ($passcode === DEPLOYMENT_PASSCODE) {
+if (!DEPLOYMENT_PASSCODE) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Deployment passcode is not configured.']);
+    exit();
+}
+
+if (hash_equals(DEPLOYMENT_PASSCODE, $passcode)) {
     $_SESSION['wizard_unlocked'] = true;
     echo json_encode(['success' => true]);
     exit();

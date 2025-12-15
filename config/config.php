@@ -27,7 +27,9 @@ define('SESSION_LIFETIME', 3600); // 1 hour
 define('PASSWORD_MIN_LENGTH', 8);
 define('MAX_LOGIN_ATTEMPTS', 5);
 define('LOCKOUT_TIME', 900); // 15 minutes
-define('DEPLOYMENT_PASSCODE', getenv('DEPLOYMENT_PASSCODE') ?: '079777');
+$envPasscode = getenv('DEPLOYMENT_PASSCODE');
+$appEnv = getenv('APP_ENV') ?: 'local';
+define('DEPLOYMENT_PASSCODE', $envPasscode !== false ? $envPasscode : ($appEnv === 'production' ? '' : '079777'));
 
 // User roles
 define('ROLE_CLIENT', 'client');

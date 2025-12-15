@@ -1179,7 +1179,9 @@ $pageTitle = 'Welcome to OUTSINC';
                         status.classList.remove('error');
                         status.classList.add('success');
                         protectedPanel?.removeAttribute('hidden');
-                        AnimationUtils.fadeIn(protectedPanel, 250);
+                        if (window.AnimationUtils && typeof AnimationUtils.fadeIn === 'function') {
+                            AnimationUtils.fadeIn(protectedPanel, 250);
+                        }
                     } else {
                         status.textContent = data.message || 'Access denied: incorrect deployment passcode.';
                         status.classList.remove('success');
