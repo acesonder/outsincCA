@@ -494,6 +494,9 @@ $pageTitle = 'Welcome to OUTSINC';
     </style>
 </head>
 <body>
+    <script>
+        window.OUTSINC = window.OUTSINC || { showModal: () => {} };
+    </script>
     <a id="top"></a>
     <header class="navbar navbar-3d">
         <div class="container navbar-container">

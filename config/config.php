@@ -30,7 +30,9 @@ define('LOCKOUT_TIME', 900); // 15 minutes
 $envPasscode = getenv('DEPLOYMENT_PASSCODE');
 $appEnv = getenv('APP_ENV') ?: 'local';
 $allowDefaultSetting = getenv('ALLOW_DEFAULT_DEPLOYMENT_PASSCODE');
-$allowDefaultPasscode = $allowDefaultSetting === false ? ($appEnv === 'local') : ($allowDefaultSetting === 'true');
+$allowDefaultPasscode = ($allowDefaultSetting !== false)
+    ? ($allowDefaultSetting === 'true')
+    : ($appEnv === 'local');
 
 if ($envPasscode !== false) {
     define('DEPLOYMENT_PASSCODE', $envPasscode);
