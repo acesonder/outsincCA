@@ -55,11 +55,11 @@
 30. Should the system alert staff when inventory falls below minimum thresholds?yes
 
 ### Order Placement & Processing
-31. Should clients be able to place orders online themselves?
-32. Should workers be able to place orders on behalf of clients?
-33. Should orders support both pickup and delivery/dropoff options?
-34. Should clients be able to schedule pickup times in advance?
-35. Should the system send order confirmation notifications?
+31. Should clients be able to place orders online themselves? yes
+32. Should workers be able to place orders on behalf of clients? yes
+33. Should orders support both pickup and delivery/dropoff options? yes
+34. Should clients be able to schedule pickup times in advance? yes
+35. Should the system send order confirmation notifications? yes
 
 ### Order Fulfillment & Tracking
 36. Should workers receive notifications of pending orders?
@@ -105,60 +105,60 @@
 62. Should referrals be categorized by type (warm, cold, self-referral)?
 63. Should referrals track status (pending, connected, completed, etc.)?
 64. Should the system send referral notifications to external agencies (if integrated)?
-65. Should referral follow-up dates be tracked automatically?
+65. Should referral follow-up dates be tracked automatically? yes
 
 ### Referral Outcomes & Feedback
-66. Should workers be able to record referral outcomes?
-67. Should the system track successful vs. unsuccessful referrals by resource?
-68. Should clients be able to provide feedback on resources they used?
-69. Should resource quality ratings be visible to workers?
-70. Should the system flag resources with poor outcomes?
+66. Should workers be able to record referral outcomes? yes
+67. Should the system track successful vs. unsuccessful referrals by resource? yes
+68. Should clients be able to provide feedback on resources they used? yes
+69. Should resource quality ratings be visible to workers? yes
+70. Should the system flag resources with poor outcomes? yes
 
 ### Resource Search & Discovery
-71. Should workers be able to search resources by keyword?
-72. Should workers be able to filter resources by category?
-73. Should workers be able to filter resources by location/distance?
-74. Should the system suggest resources based on client needs assessment?
-75. Should clients have self-service access to the resource directory?
+71. Should workers be able to search resources by keyword? yes
+72. Should workers be able to filter resources by category? yes
+73. Should workers be able to filter resources by location/distance? yes
+74. Should the system suggest resources based on client needs assessment? yes
+75. Should clients have self-service access to the resource directory? yes
 
 ---
 
 ## Section 4: Public/Community Reporting & Response (Questions 76-100)
 
-### Public Reporting Interface
-76. Should the public be able to submit reports without creating an account?
-77. Should public reports support different categories (needles, encampments, welfare checks)?
-78. Should public reports include location fields (address or map pin)?
-79. Should reporters be able to upload photos?
-80. Should reporters be able to indicate safety concerns?
+### Public Reporting Interface yes
+76. Should the public be able to submit reports without creating an account? yes
+77. Should public reports support different categories (needles, encampments, welfare checks)? yes
+78. Should public reports include location fields (address or map pin)? yes
+79. Should reporters be able to upload photos? yes
+80. Should reporters be able to indicate safety concerns? yes
 
 ### Reporter Information & Privacy
-81. Should reporters be able to submit anonymously?
-82. Should the system collect reporter contact info (optional)?
-83. Should reporters receive a tracking number for their report?
-84. Should reporters be able to check report status online?
-85. Should reporters receive update notifications when reports are addressed?
+81. Should reporters be able to submit anonymously? yes
+82. Should the system collect reporter contact info (optional)? yes
+83. Should reporters receive a tracking number for their report? yes
+84. Should reporters be able to check report status online? yes
+85. Should reporters receive update notifications when reports are addressed? yes
 
 ### Report Assignment & Workflow
-86. Should reports be automatically assigned to available workers?
-87. Should workers be able to claim/accept reports themselves?
-88. Should reports be prioritizable (low, medium, high, urgent)?
-89. Should high-priority reports send immediate alerts to supervisors?
-90. Should the system track response times for each report?
+86. Should reports be automatically assigned to available workers? yes
+87. Should workers be able to claim/accept reports themselves? yes
+88. Should reports be prioritizable (low, medium, high, urgent)? yes
+89. Should high-priority reports send immediate alerts to supervisors? yes
+90. Should the system track response times for each report? yes
 
 ### Report Response & Documentation
-91. Should workers be able to update report status as they work?
-92. Should workers be able to add response notes to reports?
-93. Should workers be able to attach photos of completed work?
-94. Should reports be closeable with outcome documentation?
-95. Should closed reports be archived for historical tracking?
+91. Should workers be able to update report status as they work? yes
+92. Should workers be able to add response notes to reports? yes
+93. Should workers be able to attach photos of completed work? yes
+94. Should reports be closeable with outcome documentation? yes
+95. Should closed reports be archived for historical tracking? yes
 
 ### Public Reporting Analytics
-96. Should the system map report locations geographically?
-97. Should the system identify hotspot areas with frequent reports?
-98. Should the system track average response times by report type?
-99. Should the system generate public impact reports (needles collected, welfare checks completed)?
-100. Should the system share anonymized data with community partners?
+96. Should the system map report locations geographically? yes
+97. Should the system identify hotspot areas with frequent reports?v yes
+98. Should the system track average response times by report type? yes
+99. Should the system generate public impact reports (needles collected, welfare checks completed)? yes
+100. Should the system share anonymized data with community partners? yes
 
 ---
 
