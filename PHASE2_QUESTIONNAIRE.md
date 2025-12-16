@@ -9,50 +9,50 @@
 ## Section 1: Case Management & Client Notes (Questions 1-25)
 
 ### Case Note Structure & Types
-1. Should case notes support different categories (contact, crisis, housing, income, etc.)?
-2. Should workers be able to tag notes with custom keywords for easy searching?
-3. Should the system auto-timestamp all case note entries?
-4. Should case notes include location/context fields (where interaction occurred)?
-5. Should workers be able to attach files/photos to case notes?
+1. Should case notes support different categories (contact, crisis, housing, income, etc.)?v yes, provide numerous categories, and option to create new category
+2. Should workers be able to tag notes with custom keywords for easy searching? yes
+3. Should the system auto-timestamp all case note entries? yes
+4. Should case notes include location/context fields (where interaction occurred)? yes
+5. Should workers be able to attach files/photos to case notes? yes, same with service providers 
 
 ### Case Note Privacy & Visibility
-6. Should workers be able to mark notes as "client-visible" or "staff-only"?
-7. Should clients have access to read their own case notes (with worker approval)?
-8. Should supervisors have automatic access to all case notes for their team?
-9. Should notes have different visibility levels (private, team, agency-wide)?
-10. Should the system track who has viewed each case note?
+6. Should workers be able to mark notes as "client-visible" or "staff-only"?yes to both
+7. Should clients have access to read their own case notes (with worker approval)? yes
+8. Should supervisors have automatic access to all case notes for their team? yes
+9. Should notes have different visibility levels (private, team, agency-wide)? yes
+10. Should the system track who has viewed each case note?yes
 
 ### Case Note Search & Organization
-11. Should workers be able to search case notes by keyword?
-12. Should workers be able to filter notes by date range?
-13. Should workers be able to filter notes by note type/category?
-14. Should the system highlight recent/unread notes?
-15. Should case notes be printable for court/documentation purposes?
+11. Should workers be able to search case notes by keyword? yes
+12. Should workers be able to filter notes by date range?yes
+13. Should workers be able to filter notes by note type/category?yes
+14. Should the system highlight recent/unread notes? yes
+15. Should case notes be printable for court/documentation purposes? yes
 
 ### Goals & Task Management
-16. Should clients be able to set their own goals in the system?
-17. Should workers be able to create goals collaboratively with clients?
-18. Should goals be categorized by area (housing, health, income, etc.)?
-19. Should goals have target completion dates?
-20. Should the system track goal progress automatically?
+16. Should clients be able to set their own goals in the system? yes
+17. Should workers be able to create goals collaboratively with clients?yes
+18. Should goals be categorized by area (housing, health, income, etc.)? yes
+19. Should goals have target completion dates? yes
+20. Should the system track goal progress automatically? yes
 
 ### Task Assignment & Workflow
-21. Should tasks be assignable to specific workers?
-22. Should tasks have due dates with reminder notifications?
-23. Should tasks be linkable to specific client goals?
-24. Should the system allow recurring tasks (weekly check-ins, etc.)?
-25. Should completed tasks feed into progress/outcome reporting?
+21. Should tasks be assignable to specific workers? yes
+22. Should tasks have due dates with reminder notifications? yes
+23. Should tasks be linkable to specific client goals?yes
+24. Should the system allow recurring tasks (weekly check-ins, etc.)?yes
+25. Should completed tasks feed into progress/outcome reporting?yes
 
 ---
 
 ## Section 2: Harm Reduction Supply Management (Questions 26-50)
 
 ### Product Catalog & Inventory
-26. Should the system maintain a catalog of available harm reduction supplies?
-27. Should products be categorized (needles, naloxone, condoms, etc.)?
-28. Should each product have images and descriptions?
-29. Should the system track inventory levels in real-time?
-30. Should the system alert staff when inventory falls below minimum thresholds?
+26. Should the system maintain a catalog of available harm reduction supplies?yes
+27. Should products be categorized (needles, naloxone, condoms, etc.)? yes
+28. Should each product have images and descriptions? yes
+29. Should the system track inventory levels in real-time? yes
+30. Should the system alert staff when inventory falls below minimum thresholds?yes
 
 ### Order Placement & Processing
 31. Should clients be able to place orders online themselves?
